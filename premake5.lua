@@ -8,10 +8,8 @@ project "GLAD"
 
     flags { "MultiProcessorCompile" }
 
-    outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin/int/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin/" .. outputdir .. "/%{prj.name}/int")
 
     defines
     {
